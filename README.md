@@ -83,7 +83,7 @@ ExternalProject_Add(
 
 add_executable(${PROJECT_NAME} main.cpp) # create your executable
 add_dependencies(${PROJECT_NAME} ${REPO_NAME}) # add dependencies to YATU library
-target_link_directories(${PROJECT_NAME} PRIVATE ${YATU_DIR}/lib${REPO_NAME}.a)  #link the static library
+target_link_libraries(${PROJECT_NAME} PRIVATE ${YATU_DIR}/lib/lib${REPO_NAME}.a)  #link the static library
 target_include_directories(${PROJECT_NAME} PRIVATE ${YATU_DIR}/include) #add the YATU include directory
 
 ```
